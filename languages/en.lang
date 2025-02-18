@@ -3,7 +3,7 @@ Goat.newVersionDetected=You are using version %1, the latest version is %2. Plea
 Goat.autoRestart1=Bot will auto restart in %1
 Goat.autoRestart2=Bot will auto restart by cron job: %1
 Goat.googleApiTokenExpired=Google API refresh token has expired or been revoked, please get a new token at https://developers.google.com/oauthplayground/
-
+ 
 # bot/login/login.js
 login.currentlyLogged=Login in progress
 login.notFoundDirAccount=Cannot find file %1
@@ -60,62 +60,62 @@ login.listenMqttClose=ListenMQTT closed
 login.listenMqttCloseByUser=ListenMQTT closed by user
 login.retryCheckLiveCookie=Retrying to check cookie... %1
 login.startBotSuccess=Bot has been started successfully, start receiving messages from users
-
+ 
 version.tooOldVersion=You are using a too old version of Goat-Bot, please update to the latest version by typing the command: %1 into the cmd/console/terminal/shell
-
+ 
 # bot/custom.js
 custom.refreshedFb_dtsg=Refreshed fb_dtsg and jazoest successfully
 custom.refreshedFb_dtsgError=An error occurred when refreshing fb_dtsg and jazoest
-
+ 
 # bot/login/loadData.js
 loadData.loadThreadDataSuccess=Loaded %1 group's data successfully!
 loadData.loadUserDataSuccess=Loaded %1 user's data successfully!
 loadData.refreshingThreadData=Updating the information of the groups...
 loadData.refreshThreadDataSuccess=Updated information of %1 group!
 loadData.refreshThreadDataError=Something went wrong when updating the groups information!
-
+ 
 # bot/login/loadScripts.js
 loadScripts.loadScriptsError=The %1 files have an error during loading:
 loadScripts.loadScriptsNotMatchOrigin=The %1 files do not match the original files on the github project, make sure that these command files are reliable:
 loadScripts.NOT_FOUND=NOT FOUND IN THE ORIGINAL SOURCE CODE:
 loadScripts.NOT_MATCH=DOES NOT MATCH THE ORIGINAL SOURCE CODE:
-
+ 
 # bot/login/socketIO.js
-socketIO.connected=Connected to socket.io server
-socketIO.error=An error occurred when connecting to the socket.io server
-
+socketIO.connected= 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚃𝙾 𝚂𝙾𝙲𝙺𝙴𝚃.𝙸𝙾 𝚂𝙴𝚁𝚅𝙴𝚁Connected to socket.io server
+socketIO.error= 𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴𝙳 𝚆𝙷𝙴𝙽 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝚃𝙷𝙴 𝚂𝙾𝙲𝙺𝙴𝚃.𝙸𝙾 𝚂𝙴𝚁𝚅𝙴𝚁
+ 
 # bot/handler/handlerCheckData.js
-handlerCheckData.cantCreateThread=Groups with id '%1' cannot be written to the database!
-handlerCheckData.cantCreateUser=Users with id '%1' cannot be written to the database!
-
+handlerCheckData.cantCreateThread=𝙶𝚁𝙾𝚄𝙿𝚂 𝚆𝙸𝚃𝙷 𝙸𝙳 '%1' 𝙲𝙰𝙽𝙽𝙾𝚃 𝙱𝙴 𝚆𝚁𝙸𝚃𝚃𝙴𝙽 𝚃𝙾 𝚃𝙷𝙴 𝙱𝙰𝙳𝙾𝙻 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 !
+handlerCheckData.cantCreateUser=𝚄𝚂𝙴𝚁 𝚆𝙸𝚃𝙷 𝙸𝙳 '%1'  𝙲𝙰𝙽𝙽𝙾𝚃 𝙱𝙴 𝚆𝚁𝙸𝚃𝚃𝙴𝙽 𝚃𝙾 𝚃𝙷𝙴 𝙱𝙰𝙳𝙾𝙻 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴!
+ 
 # bot/handler/handlerEvents.js
-handlerEvents.userBanned=সোনা তোমাকে বট ব্যবহার করা থেকে ব্যান্ড করা হয়েছে\n» কারণ: %1\n» সময়: %2\n»  ব্যবহারকারীর আইডি: %3
-handlerEvents.threadBanned=This group has been banned from using the bot\n» Reason: %1\n» Time: %2\n» Thread ID: %3
-handlerEvents.onlyAdminBox=This group is currently enabled only group administrators can use the bot
-handlerEvents.onlyAdminBot=❌ | Currently only bot's admin can use bot
-handlerEvents.commandNotFound=Command "%1" does not exist, type %2help to see all available commands
-handlerEvents.commandNotFound2=The command you are using does not exist, type %1help to see all available commands
-handlerEvents.commandSyntaxError=The command you are using is wrong syntax, please type %1help %2 to see the details of how to use this command
-handlerEvents.onlyAdmin=❌ | নাগো সোনা  "%1" এই কমান্ড তোমার জন্য নই 😩
-handlerEvents.onlyAdminToUseOnReply=❌ | Only group administrators can use the reply function of the command "%1"
-handlerEvents.onlyAdminToUseOnReaction=❌ | Only group administrators can use the reaction function of the command "%1"
-handlerEvents.onlyAdminBot2=❌ | Only bot's admin can use the command "%1"
-handlerEvents.onlyAdminBot2ToUseOnReply=❌ | Only bot's admin can use the reply function of the command "%1"
-handlerEvents.onlyAdminBot2ToUseOnReaction=❌ | Only bot's admin can use the reaction function of the command "%1"
-handlerEvents.waitingForCommand=⏱ You are in the waiting time to use this command, please come back after %1s
-handlerEvents.errorOccurred=❌ [ %1 ]\nAn error occurred at command "%2"\n\n%3
-handlerEvents.errorOccurred2=❌ [ %1 ]\nAn error occurred at command onChat in command "%2"\n\n%3
-handlerEvents.errorOccurred3=❌ [ %1 ]\nAn error occurred when executing onReply at command "%2"\n\n%3
-handlerEvents.errorOccurred4=❌ [ %1 ]\nAn error occurred when executing onReaction at command "%2"\n\n%3
-handlerEvents.errorOccurred5=❌ [ %1 ]\nAn error occurred when executing onEvent at command "%2"\n\n%3
-handlerEvents.errorOccurred6=❌ [ %1 ]\nAn error occurred when executing onEvent at command "%2"\n\n%3
-handlerEvents.errorOccurred7=❌ [ %1 ]\nAn error occurred when executing onAnyEvent at command "%2"\n\n%3
-handlerEvents.cannotFindCommandName=❌ Cannot find command name to execute this reply!
-handlerEvents.cannotFindCommand=❌ Cannot find command "%1" to execute this reply!
-
+handlerEvents.userBanned= 📌 বট এডমিন আপনাকে বট থেকে বরখাস্ত করছেন 🚫\n আপনি যদি বট ব্যবহার করতে চান তো বট এডমিন এর সাথে যোগাযোগ করুন 🧑‍🤝‍🧑 >> https://facebook.com/XAICO.RANA << \n☞︎︎︎ 𝚁𝙴𝙰𝚂𝙾𝙽: %1\n☞︎︎︎  𝚃𝙸𝙼𝙴: %2\n☞︎︎︎ 𝚄𝚂𝙴𝚁 𝙸𝙳: %3
+handlerEvents.threadBanned= 📌 বট এডমিন এই গ্রুপ এ বট বন্ধ করে দিয়েছেন 🚫\n আবার চালু করতে এডমিনকে এ্যাড বা মেসেজ করুন 🧑‍🤝‍🧑 >> https://facebook.com/XAICO.RANA <<  \n☞︎︎︎ 𝚁𝙴𝙰𝚂𝙾𝙽: %1\n☞︎︎︎ 𝚃𝙸𝙼𝚂: %2\n☞︎︎︎ 𝚃𝙷𝚁𝙴𝙰𝙳 𝙸𝙳: %3
+handlerEvents.onlyAdminBox= 𝚃𝙷𝙸𝚂 𝙶𝚁𝙾𝚄𝙿 𝙸𝚂 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙾𝙽 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙼𝙾𝙾𝙳 𝙽𝙾𝚆 𝙱𝙰𝙳𝙾𝙻 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙾𝙽𝙻𝚈 𝙵𝙾𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽
+handlerEvents.onlyAdminBot=🐸 | 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙾𝙽𝙻𝚈 𝙱𝙰𝙳𝙾𝙻 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙱𝙾𝚃
+handlerEvents.commandNotFound=𝙲𝙼𝙳 "%1" 𝙳𝙾𝙴𝚂 𝙽𝙾𝚃 𝙴𝚇𝙸𝚂𝚃, 𝚃𝚈𝙿𝙴 %2𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝙱𝙰𝙳𝙾𝙻 𝙰𝙻𝙻 𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝙲𝙼𝙳
+handlerEvents.commandNotFound2= 𝚃𝙷𝙴 𝙲𝙼𝙳 𝚈𝙾𝚄 𝙰𝚁𝙴 𝚄𝚂𝙸𝙽𝙶 𝙳𝙾𝙴𝚂 𝙽𝙾𝚃 𝙴𝚇𝙸𝚂𝚃, 𝚃𝚈𝙿𝙴%1𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝙱𝙰𝙳𝙾𝙻 𝙰𝙻𝙻 𝙲𝙼𝙳
+handlerEvents.commandSyntaxError= 𝚃𝙷𝙴 𝙱𝙰𝙳𝙾𝙻 𝙲𝙼𝙳 𝙰𝚁𝙴 𝚈𝙾𝚄 𝚄𝚂𝙸𝙽𝙶 𝙸𝚂 𝚆𝚁𝙾𝙽𝙶 𝚂𝚈𝙽𝚃𝙰𝚇, 𝙿𝙻𝙴𝙰𝚂𝙴 𝚃𝚈𝙿𝙴 %1𝙷𝙴𝙻𝙿 %2 𝚃𝙾 𝚂𝙴𝙴 𝚃𝙷𝙴 𝙳𝙴𝚃𝙰𝙸𝙻𝚂 𝙾𝙵 𝙱𝙰𝙳𝙾𝙻 𝙰𝙻𝙻 𝙲𝙼𝙳𝚂 𝙰𝙽𝙳 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙲𝙼𝙳
+handlerEvents.onlyAdmin=🐸 |𝙾𝙽𝙻𝚈 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
+handlerEvents.onlyAdminToUseOnReply=🐸 | 𝙾𝙽𝙻𝚈 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝙲𝚁𝚁𝙿𝙻𝚈 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
+handlerEvents.onlyAdminToUseOnReaction=🐸 | 𝙾𝙽𝙻𝚈 𝙶𝚁𝙾𝚄𝙿 𝙰𝙳𝙼𝙸𝙽 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝚁𝚁𝙰𝙲𝚃𝙸𝙾𝙼 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳  "%1"
+handlerEvents.onlyAdminBot2=🐸 |𝙷𝙰𝙷𝙰𝙷𝙷𝙰 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙻𝚈 𝙱𝙰𝙳𝙾𝙻 𝙰𝙳𝙼𝙸𝙽 "%1"
+handlerEvents.onlyAdminBot2ToUseOnReply=🐸 | 𝙷𝙰𝙶𝙰𝙷 𝙾𝙽𝙻𝚈 𝙱𝙰𝙳𝙾𝙻 𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 𝚇𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙴 𝚁𝙴𝙿𝙻𝚈 𝙵𝚄𝙽𝙲𝚃𝙸𝙾𝙽 𝙾𝙵 𝚃𝙷𝙴 𝙲𝙼𝙳 "%1"
+handlerEvents.onlyAdminBot2ToUseOnReaction=🐸 | 𝙷𝙰𝙷𝙰𝙷𝙷𝙰 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝚄𝚂𝙸𝙽𝙶 𝙾𝙽𝙻𝚈 𝙱𝙰𝙳𝙾𝙻 𝙰𝙳𝙼𝙸𝙽 "%1"
+handlerEvents.waitingForCommand=⏱ 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙸𝙽 𝚃𝙷𝙴 𝚆𝙰𝙸𝚃𝙸𝙽𝙶 𝚃𝙸𝙼𝙴 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙲𝙼𝙳 𝙿𝙻𝙴𝙰𝚂𝙴 𝙲𝙾𝙼𝙴 𝙱𝙰𝙲𝙺 𝙰𝙵𝚃𝙴𝚁 %1\ns𝙿𝙰𝙼 𝙼𝙰𝚁𝙱𝙸 𝙰𝚁 𝙱𝙾𝙻𝙾𝙳
+handlerEvents.errorOccurred=🐸 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴𝙳 𝙰𝚃 𝙲𝙼𝙳 "%2"\n\n%3
+handlerEvents.errorOccurred2=🐸 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝙰𝚃 𝙲𝙼𝙳 𝙾𝙽𝙲𝙷𝙰𝚃 "%2"\n\n%3
+handlerEvents.errorOccurred3=🐸 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝚆𝙷𝙴𝙽 𝙴𝚇𝙴𝙲𝚄𝚃𝙸𝙽𝙶 𝙾𝙽𝚁𝙴𝙿𝙻𝚈 𝙰𝚃 𝙲𝙼𝙳"%2"\n\n%3
+handlerEvents.errorOccurred4=🐸 [ %1 ]\n𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝚆𝙷𝙴𝙽 𝙴𝚇𝙴𝙲𝚄𝚃𝙸𝙽𝙶 𝙾𝙽𝙰𝚁𝙴𝙰𝙲𝚃𝙸𝙾𝙽 𝙰𝚃 𝙲𝙼𝙳"%2"\n\n%3
+handlerEvents.errorOccurred5=🐸 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝚆𝙷𝙴𝙽 𝙴𝚇𝙴𝙲𝚄𝚃𝙸𝙽𝙶 𝙾𝙽𝙴𝚅𝙴𝙽𝚃 𝙰𝚃 𝙲𝙼𝙳 "%2"\n\n%3
+handlerEvents.errorOccurred6=🐸 [ %1 ]\n𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝚆𝙷𝙴𝙽 𝙴𝚇𝙴𝙲𝚄𝚃𝙸𝙽𝙶 𝙾𝙽𝙴𝚅𝙴𝙽𝚃 𝙰𝚃 𝙲𝙼𝙳 "%2"\n\n%3
+handlerEvents.errorOccurred7=🐸 [ %1 ]\n𝙰𝚗 𝙴𝚁𝚁𝙾𝚁 𝙾𝙲𝙲𝚄𝚁𝚁𝙴 𝚆𝙷𝙴𝙽 𝙴𝚇𝙴𝙲𝚄𝚃𝙸𝙽𝙶 𝙾𝙽𝙰𝙽𝚈𝙴𝚅𝙴𝙽𝚃 𝙰𝚃 𝙲𝙼𝙳"%2"\n\n%3
+handlerEvents.cannotFindCommandName=🐸 𝙲𝙰𝙽𝙽𝙾𝚃 𝙵𝙸𝙽𝙳 𝙲𝙼𝙳 𝚃𝙾 𝙴𝚇𝙴𝙲𝚄𝚃𝙴 𝚃𝙷𝙸𝚂 𝚁𝙴𝙿𝙻𝚈!
+handlerEvents.cannotFindCommand=🐸 𝙲𝙰𝙽𝙽𝙾𝚃 𝙵𝙸𝙽𝙳 𝙲𝙼𝙳 "%1" 𝚃𝙾 𝙴𝚇𝙴𝙲𝚄𝚃𝙴 𝚃𝙷𝙸𝚂 𝚁𝙴𝙿𝙻𝚈!
+ 
 # bot/autoUptime.js
 autoUptime.autoUptimeTurnedOn=AutoUptime mode turned on
-
+ 
 # database/controller/index.js
 indexController.connectingMongoDB=Connecting a MONGODB database
 indexController.connectMongoDBSuccess=Successfully connected mongodb database!
@@ -123,7 +123,7 @@ indexController.connectMongoDBError=An error occurred when connecting the Mongod
 indexController.connectingMySQL=Connecting a SQLITE database
 indexController.connectMySQLSuccess=Successfully connected SQLITE database!
 indexController.connectMySQLError=An error occurred while connecting to a SQLITE database:
-
+ 
 # updater.js
 updater.updateTooFast=Please wait at least 5 minutes after the latest commit to update without error, %1 minutes %2 seconds left
 updater.latestVersion=You are using the latest version
@@ -136,16 +136,16 @@ updater.installSuccess=Installed dependencies successfully, restart the bot to u
 updater.backupSuccess=Successfully backed up changed files, see in the %1 folder
 updater.restartToApply=. Restart the bot to apply the new version
 updater.skipFile=There is a new version of the %1 file, but you have skipped this file during the update process with the comment %2 in this file
-
+ 
 # dashboard/routes/verifyfbid.js
 verifyfbid.sendCode=Your verification code is:\n%1\nThe verification code is valid for %2 minutes
-
+ 
 # utils.js
-utils.errorOccurred=❌ An error occurred:\n\n%1
-
+utils.errorOccurred= An error occurred:\n\n%1
+ 
 # for command
 command.restartedBot=Bot has been restarted
-
+ 
 # dashboard/app.js
 app.googleApiRefreshTokenExpired=Google API refresh token has expired or been revoked, please get a new token at https://developers.google.com/oauthplayground/
 app.tooManyRequests=Too many requests in the last minute. Please try again later.

@@ -1,81 +1,86 @@
-const axios = require("axios");
-const { getStreamFromURL } = global.utils;
+const gtts = require("google-tts-api");
+const fs = require("fs");
+const path = require("path");
+const fetch = require("node-fetch");
 
 module.exports = {
 	config: {
-		name: "dhbc",
-		version: "1.3",
-		author: "NTKhang",
-		countDown: 5,
+		name: "say",
+		version: "2.0",
+		author: "RANA",
+		usePrefix: true,
+		countDown: 3,
 		role: 0,
 		description: {
-			vi: "chơi game đuổi hình bắt chữ",
-			en: "play game catch the word"
+			en: "Convert your text into stylish speech!",
 		},
-		category: "game",
+		category: "fun",
 		guide: {
-			en: "{pn}"
-		},
-		envConfig: {
-			reward: 1000
+			en: "{pn} <style> <text>\n\n🎭 Available Styles:\n- male\n- female\n- funny\n- robot\n- deep\n- slow",
 		}
 	},
 
-	langs: {
-		vi: {
-			reply: "Hãy reply tin nhắn này với câu trả lời\n%1",
-			isSong: "Đây là tên bài hát của ca sĩ %1",
-			notPlayer: "⚠️ Bạn không phải là người chơi của câu hỏi này",
-			correct: "🎉 Chúc mừng bạn đã trả lời đúng và nhận được %1$",
-			wrong: "⚠️ Bạn đã trả lời sai"
-		},
-		en: {
-			reply: "Please reply this message with the answer\n%1",
-			isSong: "This is the name of the song of the singer %1",
-			notPlayer: "⚠️ You are not the player of this question",
-			correct: "🎉 Congratulations you have answered correctly and received %1$",
-			wrong: "⚠️ You have answered incorrectly"
+	onStart: async function ({ message, args }) {
+		if (args.length < 2) return message.reply("🗣️ Usage: say <style> <text>\nExample: say funny Hello, how are you?");
+
+		// ইউজারের দেওয়া ভয়েস স্টাইল এবং টেক্সট আলাদা করা
+		const style = args[0].toLowerCase();
+		const text = args.slice(1).join(" ");
+
+		// ভয়েসের জন্য ল্যাঙ্গুয়েজ সেট করা
+		const lang = "bn"; // বাংলা ভয়েস
+
+		// ভয়েস ইফেক্ট সেট করা
+		let pitch = 1.0; // স্বাভাবিক পিচ
+		let speed = 1.0; // স্বাভাবিক স্পিড
+
+		switch (style) {
+			case "male":
+				pitch = 0.9;
+				break;
+			case "female":
+				pitch = 1.2;
+				break;
+			case "funny":
+				pitch = 2.0;
+				speed = 1.5;
+				break;
+			case "robot":
+				pitch = 0.8;
+				speed = 0.9;
+				break;
+			case "deep":
+				pitch = 0.6;
+				break;
+			case "slow":
+				speed = 0.6;
+				break;
+			default:
+				return message.reply("❌ ভুল স্টাইল! উপলব্ধ স্টাইল:\n- male\n- female\n- funny\n- robot\n- deep\n- slow");
 		}
-	},
 
-	onStart: async function ({ message, event, commandName, getLang }) {
-		const datagame = (await axios.get("https://goatbotserver.onrender.com/api/duoihinhbatchu")).data;
-		const { wordcomplete, casi, image1, image2 } = datagame.data;
-
-		message.reply({
-			body: getLang("reply", wordcomplete.replace(/\S/g, "█ ")) + (casi ? getLang("isSong", casi) : ''),
-			attachment: [
-				await getStreamFromURL(image1),
-				await getStreamFromURL(image2)
-			]
-		}, (err, info) => {
-			global.GoatBot.onReply.set(info.messageID, {
-				commandName,
-				messageID: info.messageID,
-				author: event.senderID,
-				wordcomplete
+		try {
+			// Google TTS API থেকে অডিও লিংক
+			const audioUrl = gtts.getAudioUrl(text, {
+				lang,
+				slow: speed < 1,
+				host: "https://translate.google.com",
 			});
-		});
-	},
 
-	onReply: async ({ message, Reply, event, getLang, usersData, envCommands, commandName }) => {
-		const { author, wordcomplete, messageID } = Reply;
-		if (event.senderID != author)
-			return message.reply(getLang("notPlayer"));
+			// MP3 ডাউনলোড এবং পাঠানো
+			const filePath = path.join(__dirname, "voice.mp3");
+			const response = await fetch(audioUrl);
+			const buffer = await response.arrayBuffer();
+			fs.writeFileSync(filePath, Buffer.from(buffer));
 
-		if (formatText(event.body) == formatText(wordcomplete)) {
-			global.GoatBot.onReply.delete(messageID);
-			await usersData.addMoney(event.senderID, envCommands[commandName].reward);
-			message.reply(getLang("correct", envCommands[commandName].reward));
+			// ভয়েস মেসেজ পাঠানো
+			message.reply({ attachment: fs.createReadStream(filePath) });
+
+			// টেম্প ফাইল ডিলিট
+			setTimeout(() => fs.unlinkSync(filePath), 5000);
+		} catch (err) {
+			message.reply("❌ ভয়েস রূপান্তর করতে সমস্যা হয়েছে!");
+			console.error(err);
 		}
-		else
-			message.reply(getLang("wrong"));
 	}
 };
-
-function formatText(text) {
-	return text.normalize("NFD")
-		.toLowerCase()
-		.replace(/[\u0300-\u036f]/g, "")
-		.replace(/[đ|Đ]/g, (x) => x == "đ" ? "d" : "D");
-}

@@ -9,10 +9,10 @@ module.exports = {
 		role: 0,
 		category: 'utility',
 		shortDescription: {
-			en: 'Explain the word by dictionary.'
+			en: '𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗧𝗵𝗲 𝗪𝗼𝗿𝗱 𝗕𝘆 𝗗𝗶𝗰𝘁𝗶𝗼𝗻𝗮𝗿𝘆.'
 		},
 		longDescription: {
-			en: 'Explain the word by dictionary.'
+			en: '𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗧𝗵𝗲 𝗪𝗼𝗿𝗱 𝗕𝘆 𝗗𝗶𝗰𝘁𝗶𝗼𝗻𝗮𝗿𝘆.'
 		},
 		guide: {
 			en: '{pn}'

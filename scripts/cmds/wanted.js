@@ -22,7 +22,7 @@ module.exports = {
       noTag: "Bạn phải tag người bạn muốn tát"
     },
     en: {
-      noTag: "You must tag the person you want to "
+      noTag: "𝗬𝗼𝘂 𝗠𝘂𝘀𝘁 𝗧𝗮𝗴 𝗧𝗵𝗲 𝗣𝗲𝗿𝘀𝗼𝗻 𝗬𝗼𝘂 𝗪𝗮𝗻𝘁 𝗧𝗼 𝗨𝘀𝗲"
     }
   },
 

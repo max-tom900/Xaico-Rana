@@ -19,14 +19,14 @@ module.exports = {
   const permission = global.GoatBot.config.GOD;
   
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("You don't have enough permission to use this command. Only My Authors Have Access.", event.threadID, event.messageID);
+    api.sendMessage("𝗬𝗼𝘂 𝗗𝗼𝗻𝘁 𝗛𝗮𝘃𝗲 𝗘𝗻𝗼𝘂𝗴𝗵 𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻 𝗧𝗼 𝗨𝘀𝗲 𝗧𝗵𝗶𝘀 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 . 𝗢𝗻𝗹𝘆 𝗠𝘆 𝗔𝗱𝗺𝗶𝗻 𝗛𝗮𝘃𝗲 𝗔𝗰𝗰𝗲𝘀 ❤️‍🩹.", event.threadID, event.messageID);
 
   if (!url) {
-    api.sendMessage("Please provide a URL.", event.threadID, event.messageID);
+    api.sendMessage("📌 𝗣𝗹𝗲𝗮𝘀𝘀𝗲 𝗣𝗿𝗼𝘃𝗶𝗱𝗲 𝗔 𝗨𝗥𝗟", event.threadID, event.messageID);
     return;
   }
 
-  api.sendMessage(`🔍 Fetching preview for "${url}"...`, event.threadID, event.messageID);
+  api.sendMessage(`🔍 𝗙𝗲𝘁𝗰𝗵𝗶𝗻𝗴 𝗣𝗿𝗲𝘃𝗶𝗲𝘄 𝗙𝗼𝗿 "${url}"...`, event.threadID, event.messageID);
 
   try {
     const preview = await generateWebPreview(url);
@@ -40,7 +40,7 @@ module.exports = {
         api.sendMessage(preview.alternativeResults, event.threadID);
       }
     } else {
-      api.sendMessage("No information available for this URL.", event.threadID);
+      api.sendMessage("𝗡𝗼 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗙𝗼𝗿 𝗧𝗶𝘀 𝗨𝗥𝗟 .", event.threadID);
     }
   } catch (error) {
     console.error(error);
@@ -57,11 +57,11 @@ module.exports = {
     const imageUrl = $("meta[property='og:image']").attr("content") || "";
 
     const previewText = `
-🌐 Preview for "${title}":
+🌐 𝗣𝗿𝗲𝘃𝗶𝗲𝘄 𝗙𝗼𝗿 "${title}":
 
-📜 Description: ${description}
-🔗 URL: ${url}
-🖼️ Image URL: ${imageUrl}
+📜 𝗗𝗲𝘀𝗰𝗿𝗶𝗼𝘁𝗶𝗼𝗻: ${description}
+🔗 𝗨𝗥𝗟: ${url}
+🖼️ 𝗜𝗺𝗾𝗴𝗲 𝗨𝗿𝗹: ${imageUrl}
 `;
 
     const apiResponse = await axios.get(`https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&titles=${encodeURIComponent(title)}`);

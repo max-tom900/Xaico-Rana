@@ -7,7 +7,7 @@ module.exports = {
 	config: {
 		name: "say",
 		version: "2.0",
-		author: "RANA",
+		author: "RANA",//Don't change the credit because I made it. Any problems to contact me. https://facebook.com/100063487970328
 		usePrefix: true,
 		countDown: 3,
 		role: 0,
@@ -84,3 +84,4 @@ module.exports = {
 		}
 	}
 };
+

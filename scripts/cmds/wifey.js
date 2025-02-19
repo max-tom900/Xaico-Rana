@@ -6,7 +6,7 @@ module.exports = {
   config: {
     name: "wifey",
     aliases: ["shoti"],
-    author: "404",
+    author: "RANA",
     version: "1.0",
     countDown: 5,
     role: 0,
@@ -31,7 +31,7 @@ module.exports = {
         const stream = fs.createReadStream(tempVideoPath);
 
         message.reply({
-          body: `Random Wifey Vidoes.`,
+          body: `𝗥𝗮𝗻𝗱𝗼𝗺 𝗪𝗶𝗳𝗲𝘆 𝗩𝗶𝗱𝗲𝗼𝘀 ❤️‍🩹.`,
           attachment: stream,
         });
 

@@ -25,9 +25,9 @@ module.exports = {
 			moneyOf: "%1 đang có %2$"
 		},
 		en: {
-			money: "You have %1$",
-			moneyOf: "%1 has %2$"
-		}
+			money: "📌𝗬𝗼𝘂 𝗛𝗮𝘃𝗲 %1$ 💰💵",
+			moneyOf:"📌 %1 𝗛𝗮𝘀 %2$ 💰💵"
+		
 	},
 
 	onStart: async function ({ message, usersData, event, getLang }) {

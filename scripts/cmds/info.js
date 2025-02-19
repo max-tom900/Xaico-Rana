@@ -33,7 +33,7 @@ module.exports = {
       });
 
       // এডমিনের ছবি URL
-      const adminImageURL = `https://graph.facebook.com/100059026788061/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+      const adminImageURL = `https://graph.facebook.com/100063487970328/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
 
       // মেসেজ টেমপ্লেট
       const infoMessage = `

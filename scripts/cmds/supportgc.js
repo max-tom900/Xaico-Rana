@@ -18,7 +18,7 @@ module.exports = {
      }
   },
   onStart: async function({ api, event }) {
-    const supportGroupId = "7381002688693816";
+    const supportGroupId = "7255259501235012";
 
     if (event.threadID === supportGroupId) {
       api.sendMessage("⚠ | 𝗬𝗼𝘂 𝗔𝗿𝗲 𝗔𝗹𝗿𝗲𝗮𝗱𝘆 𝗜𝗻 𝗧𝗵𝗲 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗚𝗿𝗼𝘂𝗽.", event.threadID);

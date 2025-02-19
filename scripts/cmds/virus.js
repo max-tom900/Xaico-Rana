@@ -30,7 +30,7 @@ module.exports = {
       const { success, message, reports } = res.data;
 
       if (success) {
-        api.sendMessage("⏳ Scanning for results...", threadID, messageID);
+        api.sendMessage("⏳ 𝗦𝗰𝗮𝗻𝗻𝗶𝗻𝗴 𝗙𝗼𝗿 𝗥𝗲𝘀𝘂𝗹𝘁𝘀...", threadID, messageID);
         api.setMessageReaction("⏳", event.messageID, (err) => {
           if (err) {
             console.error("Error setting reaction:", err);

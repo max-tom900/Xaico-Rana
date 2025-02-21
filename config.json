@@ -19,11 +19,11 @@
   },
   "adminBot": [
     "100063487970328",
-    "100094682484325"
+    "100095088137702"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [],
+    "whiteListIds": ["100063487970328","100095088137702"],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "⎯⃝🪽〲রা্ঁনা্ঁ ব্ঁট্ঁ⎯⃝❤️‍🩹•🤖",

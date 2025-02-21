@@ -3,7 +3,7 @@ module.exports = {
 config: {
 		name: "bot",
     version: "1.0",
-		author: "RANA", //Don't change the credit because I made it. Any problems to contact me. https://facebook.com/100063487970328
+		author: "MOHAMMAD-BADOL", //Don't change the credit because I made it. Any problems to contact me. https://facebook.com/100063487970328
 		countDown: 5,
 		role: 0,
 		shortDescription: "no-prefix",

@@ -39,7 +39,7 @@ module.exports = {
       ).data;
       fs.writeFileSync(filePath, Buffer.from(vid, "utf-8"));
       const url = await global.utils.shortenURL(data.result);
-      api.setMessageReaction("✅", event.messageID, (err) => {}, true);
+      api.setMessageReaction("☑️", event.messageID, (err) => {}, true);
       api.sendMessage({
           body: `${data.cp || null}\n𝙻𝚒𝚗𝚔 = ${url || null}`,
           attachment: fs.createReadStream(filePath),

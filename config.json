@@ -1,5 +1,4 @@
-
-  {
+{
   "facebookAccount": {
     "email": "hgvvbv",
     "password": "gdsvv",
@@ -24,6 +23,8 @@
   "whiteListMode": {
     "enable": false,
     "whiteListIds": ["100063487970328","100095088137702"],
+"whiteListModeThread": {
+    "enable": true,                                                             "whiteListThreadIds": [                                                       "8647395502017936"
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "⎯⃝🪽〲রা্ঁনা্ঁ ব্ঁট্ঁ⎯⃝❤️‍🩹•🤖",
@@ -134,10 +135,10 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": false,
+    "selfListen": true,
     "selfListenEvent": true,
     "autoMarkDelivery": false,
     "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   }
-    }
+  }

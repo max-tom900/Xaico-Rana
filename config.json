@@ -38,8 +38,8 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "⎯⃝🪽〲রা্ঁনা্ঁ ⎯⃝❤️‍🩹•",
-  "prefix": ".",
+  "nickNameBot": "⎯⃝🪽〲𝚈𝙾𝚄𝚁 𝙱𝙰𝙱𝙴⎯⃝❤️‍🩹•",
+  "prefix": "/",
   "autoSetNickname": true,
   "authorFB": "https://www.facebook.com/xnilxhowdhury143",
   "authorName": "X N I L",
